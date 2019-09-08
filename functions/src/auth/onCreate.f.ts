@@ -1,11 +1,12 @@
-const functions = require('firebase-functions');
-const admin = require('firebase-admin');
+import * as functions from 'firebase-functions';
+import * as admin from 'firebase-admin';
+
 try { admin.initializeApp(functions.config().firebase); } catch (e) { }
 
 /**
  * Creates a new user document in firestore
  */
-export const createNewUser = async (userRecord: any) => {
+const createNewUser = async (userRecord: any) => {
   console.info("createNewUser", userRecord);
   const { uid, email } = userRecord;
   const newUserRecord = {

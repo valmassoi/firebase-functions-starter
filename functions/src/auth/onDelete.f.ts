@@ -1,11 +1,12 @@
-const functions = require('firebase-functions');
-const admin = require('firebase-admin');
+import * as functions from 'firebase-functions';
+import * as admin from 'firebase-admin';
+
 try { admin.initializeApp(functions.config().firebase); } catch (e) { }
 
 /**
  *
  */
-export const handleAuthOnDelete = async (userRecord: any) => {
+const handleAuthOnDelete = (userRecord: any) => {
   console.info("handleAuthOnDelete", userRecord);
   return;
 }
