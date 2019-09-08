@@ -1,1 +1,5 @@
-{}
+{
+  "projects": {
+    "test": "fb-functions-starter-test"
+  }
+}
